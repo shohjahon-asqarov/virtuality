@@ -15,6 +15,8 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Services from './components/Services';
 import Devider from './ui/Devider';
+import About from './components/About';
+import OurTeam from './components/OurTeam';
 
 
 export default function App() {
@@ -30,6 +32,10 @@ export default function App() {
         <Header />
         <Devider />
         <Services />
+        <Devider />
+        <About />
+        <Devider />
+        <OurTeam />
       </div>
     </div>
   )
