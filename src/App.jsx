@@ -8,9 +8,13 @@ import 'aos/dist/aos.css';
 
 // import sass styles 
 import './scss/main.scss';
+
+
 import Navbar from './components/Navbar';
 import { useEffect } from 'react';
 import Header from './components/Header';
+import Services from './components/Services';
+import Devider from './ui/Devider';
 
 
 export default function App() {
@@ -24,6 +28,8 @@ export default function App() {
       <div className="container">
         <Navbar />
         <Header />
+        <Devider />
+        <Services />
       </div>
     </div>
   )
