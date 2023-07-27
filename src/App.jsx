@@ -18,6 +18,7 @@ import Devider from './ui/Devider';
 import About from './components/About';
 import OurTeam from './components/OurTeam';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 export default function App() {
@@ -39,6 +40,9 @@ export default function App() {
         <OurTeam />
         <Devider />
         <Contact />
+        <Devider />
+        <Footer />
+        <Devider />
       </div>
     </div>
   )
