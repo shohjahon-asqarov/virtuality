@@ -6,25 +6,25 @@ import Button from "../ui/Button";
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    window.onscroll = () => {
-        setIsOpen(false)
-    };
-
     return (
-        <section className="md:pt-8 py-2">
+        <section id="navbar" className="md:pt-8 py-2">
             <nav className="container relative">
+
+                {/* desktop navbar */}
                 <div className="w-full">
                     <div className="flex items-center h-20 w-full">
                         <div className="flex items-center justify-between w-full">
                             <div className="flex justify-center items-center flex-shrink-0 ">
-                                <img className="md:w-auto w-20" src={logo} alt="logo" />
+                                <a href="#navbar">
+                                    <img className="md:w-auto w-20" src={logo} alt="logo" />
+                                </a>
                             </div>
                             <div className="hidden 900:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <ul className="flex gap-16 pr-6">
-                                        {menus.map(menu => {
+                                        {menus.map((menu , index) => {
                                             return (
-                                                <li>
+                                                <li key={index}>
                                                     <a href={`#${menu.link}`} className="text-white nav-link">{menu.title}</a>
                                                 </li>
                                             )
@@ -47,6 +47,7 @@ function Navbar() {
                     </div>
                 </div>
 
+                {/* mobile navbar  */}
                 <Transition
                     show={isOpen}
                     enter="transition ease-out duration-500 transform"
@@ -57,7 +58,7 @@ function Navbar() {
                     leaveTo="opacity-0 scale-75"
                 >
                     {(ref) => (
-                        <div className="md:none w-full" id="mobile-menu">
+                        <div onclick={() => setIsOpen(false)} className="md:none w-full" id="mobile-menu">
                             <div
                                 ref={ref}
                                 className=" pt-2 pb-10 sm:px-3"

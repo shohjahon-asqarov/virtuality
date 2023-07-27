@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 // import bootstrap-icons 
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
@@ -9,9 +11,8 @@ import 'aos/dist/aos.css';
 // import sass styles 
 import './scss/main.scss';
 
-
+// import components 
 import Navbar from './components/Navbar';
-import { useEffect } from 'react';
 import Header from './components/Header';
 import Services from './components/Services';
 import Devider from './ui/Devider';
@@ -20,6 +21,8 @@ import OurTeam from './components/OurTeam';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+// loader 
+import Loader from './ui/Loader';
 
 export default function App() {
 
@@ -27,14 +30,23 @@ export default function App() {
     AOS.init();
   }, [])
 
+  const [loader, setLoader] = useState(true)
+
+  setTimeout(
+    () => {
+      setLoader(false)
+    },
+    1500
+  )
+
   return (
-    <div className="bg-dark min-h-screen">
-      <div className="container">
+    loader
+      ? <Loader />
+      : <div className='bg-dark overflow-x-hidden w-full'>
         <Navbar />
         <Header />
         <Devider />
         <Services />
-        <Devider />
         <About />
         <Devider />
         <OurTeam />
@@ -44,6 +56,5 @@ export default function App() {
         <Footer />
         <Devider />
       </div>
-    </div>
   )
 }

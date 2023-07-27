@@ -1,5 +1,6 @@
-import { about1, about2 } from '../assets/data'
-import Button from '../ui/Button'
+import { about1, about2 } from '../assets/data' ;
+
+import Button from '../ui/Button' ;
 
 function About() {
     return (
@@ -16,6 +17,7 @@ function About() {
                     </div>
                 </div>
             </div>
+
             <div data-aos="fade-right" className="flex items-center flex-col-reverse md:flex-row py-5">
                 <div className="w-full lg:w-7/12 text-white">
                     <h3 className='text-center md:text-left text-2xl md:text-[38px] font-bold py-6 md:leading-[45px]'>We complete every projectsextra care as customer need</h3>

@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  img {
+    @apply bg-cover bg-no-repeat;
+  }
+}
+
 @layer components {
-    .container {
-        @apply max-w-7xl mx-auto
-    }
+  .container {
+    @apply max-w-7xl mx-auto px-5;
+  }
+
+  .footer-li {
+    @apply pb-4 items-center flex;
+  }
+
+  .footer-link {
+    @apply text-base hover:translate-x-2 duration-300 ml-2;
+  }
 }

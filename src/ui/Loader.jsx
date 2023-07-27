@@ -1,12 +1,12 @@
 
 function Loader() {
     return (
-        <div className="loader-wrapper">
+        <section className="loader-wrapper">
             <div className="loader">
                 <span></span>
                 <span></span>
             </div>
-        </div>
+        </section>
     )
 }
 

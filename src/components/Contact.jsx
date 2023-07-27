@@ -1,5 +1,5 @@
-import TopContact from '../ui/TopContact'
-import InputGroup from '../ui/InputGroup'
+import TopContact from '../ui/TopContact' ;
+import InputGroup from '../ui/InputGroup' ;
 
 function Contact() {
     return (

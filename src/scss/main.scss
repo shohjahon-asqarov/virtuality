@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+@import url(./loader.scss);
 @import url(./scrol.scss);
 
 * {
@@ -163,10 +165,7 @@
     }
 }
 
-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 .img-blur {
     position: relative;
@@ -191,10 +190,6 @@ img {
     transition: 0.3s all;
     border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 10;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .user_card,

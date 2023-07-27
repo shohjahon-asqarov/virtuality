@@ -1,5 +1,5 @@
-import { headerImg } from '../assets/data'
-import Button from '../ui/Button'
+import { headerImg } from '../assets/data' ;
+import Button from '../ui/Button' ;
 
 import { TypeAnimation } from 'react-type-animation';
 
